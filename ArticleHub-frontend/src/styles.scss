@@ -1,0 +1,46 @@
+// Place @use rules at the top
+@use '@angular/material' as mat;
+
+
+
+// Include Material core styles and set up the theme
+@include mat.core();
+
+// Define the theme object
+$ArticleHub-frontend-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  density: (
+    scale: 0,
+  )
+));
+
+// Apply the theme globally
+:root {
+  @include mat.all-component-themes($ArticleHub-frontend-theme);
+}
+
+// Global styles for the body and html
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// Custom styles for mat-chip-option
+.mat-chip-option-disabled {
+  background-color: lightgreen !important;
+  opacity: 1 !important;
+  text-align: center !important;
+}
+
+.mat-chip-option-disabled-false {
+  background-color: #FFCCCB !important;
+  opacity: 1 !important;
+}

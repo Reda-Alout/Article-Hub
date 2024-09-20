@@ -1,0 +1,13 @@
+# Ignorer le dossier packages
+packages/
+
+# Ignorer les fichiers de build
+bin/
+obj/
+
+# Ignorer les dossiers de configuration de Visual Studio
+.vs/
+
+# Autres fichiers inutiles
+*.user
+*.suo
